@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Travel Experts</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form action="/contact" method="POST">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone">
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
+
+            <label for="province">Province:</label>
+            <input type="text" id="province" name="province" required>
+
+            <label for="postalCode">Postal Code:</label>
+            <input type="text" id="postalCode" name="postalCode" required>
+
+            <label for="feedbackMessage">Message:</label>
+            <textarea id="feedbackMessage" name="feedbackMessage" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Travel Experts. All rights reserved.</p>
+    </footer>
+</body>
+</html>

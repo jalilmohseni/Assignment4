@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Entries - Travel Experts</title>
+    <link rel="stylesheet" href="/styles.css"> <!-- Ensure this path correctly points to your CSS -->
+</head>
+<body>
+    <header>
+        <h1>Contact Entries</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <ul>
+            <!-- Loop through all contacts and display their details -->
+            <% contacts.forEach(contact => { %>
+                <li>
+                    <strong><%= contact.first_name %> <%= contact.last_name %></strong><br>
+                    Email: <%= contact.email %><br>
+                    Message: <%= contact.feedback_message %><br>
+
+                    <!-- Form for deleting a contact -->
+                    <!-- The method is POST but the _method=DELETE query tells method-override to treat it as DELETE -->
+                    <form action="/contacts/delete/<%= contact.id %>?_method=DELETE" method="POST">
+                        <button type="submit">Delete</button>
+                    </form>
+                </li>
+            <% }); %>
+        </ul>
+    </main>
+    <footer>
+        <p>&copy; 2024 Travel Experts. All rights reserved.</p>
+    </footer>
+</body>
+</html>
