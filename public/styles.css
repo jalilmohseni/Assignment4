@@ -111,22 +111,3 @@ footer {
     padding: 10px 0; /* Padding */
 }
 
-/* Responsive Styles */
-@media (max-width: 600px) {
-    h1, h2 {
-        font-size: 1.2rem; /* Adjust font size for smaller screens */
-    }
-
-    .flex-container {
-        flex-direction: column; /* Stack items on small screens */
-        align-items: flex-start; /* Align items to the start */
-    }
-
-    .flex-container img {
-        max-width: 100%; /* Full width on small screens */
-    }
-
-    form {
-        padding: 15px; /* Adjust padding for smaller screens */
-    }
-}
