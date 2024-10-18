@@ -8,75 +8,125 @@ body {
     color: #333333;
 }
 
+/* Header Styles */
 header {
-    background: #28a745;
-    color: #fff;
+    background: #28a745; /* Green background */
+    color: #fff; /* White text */
     padding: 10px 0;
     text-align: center;
 }
 
+/* Navigation Styles */
 nav ul {
-    list-style: none;
+    list-style: none; /* Remove bullets */
     padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin: 10px 0;
+    display: flex; /* Use Flexbox for navigation */
+    justify-content: center; /* Center the nav items */
+    gap: 15px; /* Space between items */
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
+    color: #fff; /* White text */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
 }
 
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
+nav ul li a:hover {
+    color: #e0e0e0; /* Light gray on hover */
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px; /* Padding around main content */
+}
+
+.flex-container {
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Center items vertically */
+    gap: 20px; /* Space between items */
+    padding: 20px;
 }
 
 h1, h2 {
-    color: #444;
+    color: #444; /* Dark gray color */
 }
 
-main {
-    padding: 20px;
+h2 {
+    margin-right: 20px; /* Space between h2 and image */
+    font-size: 1.5rem; /* Font size */
 }
 
+/* Image Styling */
+.flex-container img {
+    max-width: 400px; /* Set a max width for the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: add rounded corners */
+}
+
+/* Form Styles */
 form {
-    max-width: 500px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px; /* Limit form width */
+    margin: 0 auto; /* Center the form */
+    background: #fff; /* White background for the form */
+    padding: 20px; /* Padding inside the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
 }
 
 form label {
-    display: block;
-    margin: 10px 0 5px;
+    display: block; /* Stack labels */
+    margin: 10px 0 5px; /* Spacing */
 }
 
-form input, form textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+form input,
+form textarea {
+    width: 100%; /* Full width */
+    padding: 8px; /* Padding inside inputs */
+    margin-bottom: 10px; /* Space below inputs */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
 }
 
 form button {
-    width: 100%;
-    padding: 10px;
-    background: #333;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding inside button */
+    background: #333; /* Dark background */
+    color: #fff; /* White text */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s ease; /* Smooth background transition */
 }
 
 form button:hover {
-    background: #555;
+    background: #555; /* Lighter gray on hover */
+}
+
+/* Footer Styles */
+footer {
+    background: #333; /* Dark background */
+    color: #fff; /* White text */
+    text-align: center; /* Centered text */
+    padding: 10px 0; /* Padding */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    h1, h2 {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+    }
+
+    .flex-container {
+        flex-direction: column; /* Stack items on small screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .flex-container img {
+        max-width: 100%; /* Full width on small screens */
+    }
+
+    form {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
 }

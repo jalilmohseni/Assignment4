@@ -1,8 +1,8 @@
 // Import required modules
 const express = require('express');                // Express for building web server
-const path = require('path');                      // Path module for directory path operations
+const path = require('path');                      // Path module for path operations
 const mysql = require('mysql');                    // MySQL for database connections
-const methodOverride = require('method-override'); // without using override i got error, Method Override for handling DELETE requests 
+const methodOverride = require('method-override'); // without using override i got error in my delete method, use Method Override for handling DELETE requests 
 const getRandomGreeting = require('./greeting');   // Custom module to generate random greetings
 
 // Initialize the Express application
@@ -10,8 +10,8 @@ const app = express();
 
 // Set up MySQL database connection
 const db = mysql.createConnection({
-    host: 'localhost',           // MySQL server host
-    user: 'root',                // MySQL username
+    host: 'localhost',           // server host
+    user: 'root',                // username
     password: 'Cprg212user',     // MySQL password
     database: 'CPRG212'          // Database name
 });
@@ -19,14 +19,14 @@ const db = mysql.createConnection({
 // Connect to MySQL
 db.connect(err => {
     if (err) throw err;
-    console.log('MySQL Connected...'); // Logs connection success
+    console.log('MySQL Connected...'); // Jus to confirm connection success
 });
 
 // Set view engine to EJS (for rendering dynamic HTML)
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views')); // Set the views directory
 
-// Middleware to parse URL-encoded data (form submissions)
+// Middleware to parse URL data (form submissions)
 app.use(express.urlencoded({ extended: true }));
 
 // Use Method Override to handle DELETE requests in the forms
@@ -76,7 +76,7 @@ app.get('/thank-you', (req, res) => {
     res.render('thank-you', { name, email }); // Render the thank-you.ejs template and pass the variables
 });
 
-// Display Contact Entries (For Admin/Viewing Purposes)
+// Display Contact Entries (For Admin Viewing )
 app.get('/contacts', (req, res) => {
     const sql = 'SELECT * FROM contacts'; // SQL query to fetch all contact entries
     db.query(sql, (err, results) => {
@@ -86,17 +86,8 @@ app.get('/contacts', (req, res) => {
 });
 
 // DELETE Contact Entry (Using Method Override for DELETE request)
-// app.post('/contacts/delete/:id', (req, res) => {
-//     const contactId = req.params.id; // Get the ID of the contact to delete from the URL
-//     const sql = 'DELETE FROM contacts WHERE id = ?'; // SQL query to delete the contact with the given ID
-    
-//     db.query(sql, [contactId], (err, result) => {
-//         if (err) throw err;
-//         res.redirect('/contacts'); // Redirect back to the contacts page after deletion
-//     });
-// });
 app.delete('/contacts/delete/:id', (req, res) => {
-    console.log('DELETE request received for contact ID:', req.params.id); // This should log when delete is triggered
+    console.log('DELETE request received for contact ID:', req.params.id); // This should log in terminal when delete is triggered
     
     const contactId = req.params.id;
     const sql = 'DELETE FROM contacts WHERE id = ?';
