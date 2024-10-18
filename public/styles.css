@@ -10,8 +10,8 @@ body {
 
 /* Header Styles */
 header {
-    background: #28a745; /* Green background */
-    color: #fff; /* White text */
+    background: #28a745; 
+    color: #fff; 
     padding: 10px 0;
     text-align: center;
 }
@@ -27,13 +27,13 @@ nav ul {
 }
 
 nav ul li a {
-    color: #fff; /* White text */
+    color: #fff; 
     text-decoration: none; /* Remove underline */
     transition: color 0.3s ease; /* Smooth color transition on hover */
 }
 
 nav ul li a:hover {
-    color: #e0e0e0; /* Light gray on hover */
+    color: #e0e0e0; 
 }
 
 /* Main Content Styles */
@@ -54,21 +54,21 @@ h1, h2 {
 
 h2 {
     margin-right: 20px; /* Space between h2 and image */
-    font-size: 1.5rem; /* Font size */
+    font-size: 1.5rem; /* Font size compared to its parents */
 }
 
 /* Image Styling */
 .flex-container img {
     max-width: 400px; /* Set a max width for the image */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 8px; /* Optional: add rounded corners */
+    border-radius: 8px; 
 }
 
 /* Form Styles */
 form {
     max-width: 500px; /* Limit form width */
-    margin: 0 auto; /* Center the form */
-    background: #fff; /* White background for the form */
+    margin: 0 auto; 
+    background: #fff; 
     padding: 20px; /* Padding inside the form */
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
@@ -83,16 +83,16 @@ form input,
 form textarea {
     width: 100%; /* Full width */
     padding: 8px; /* Padding inside inputs */
-    margin-bottom: 10px; /* Space below inputs */
-    border: 1px solid #ccc; /* Light gray border */
+    margin-bottom: 10px; 
+    border: 1px solid #ccc; 
     border-radius: 4px; /* Rounded corners */
 }
 
 form button {
     width: 100%; /* Full width */
     padding: 10px; /* Padding inside button */
-    background: #333; /* Dark background */
-    color: #fff; /* White text */
+    background: #333; 
+    color: #fff; 
     border: none; /* No border */
     border-radius: 4px; /* Rounded corners */
     cursor: pointer; /* Pointer cursor on hover */
@@ -100,14 +100,14 @@ form button {
 }
 
 form button:hover {
-    background: #555; /* Lighter gray on hover */
+    background: #555; 
 }
 
 /* Footer Styles */
 footer {
-    background: #333; /* Dark background */
-    color: #fff; /* White text */
-    text-align: center; /* Centered text */
-    padding: 10px 0; /* Padding */
+    background: #333;
+    color: #fff; 
+    text-align: center; 
+    padding: 10px 0; 
 }
 
